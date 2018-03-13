@@ -11,14 +11,20 @@ import (
 	"github.com/gorilla/websocket"
 )
 
-type serverSettings struct {
+type rcv struct {
+	Message    string
+	Identifier int
+	Type       string
+	Stacktrace *string
+}
+type settings struct {
 	host     string
 	port     int
 	password string
 }
 
 // Connect connects to a rust server given the input settings and channels to put data into
-func Connect(settings serverSettings, send chan string, generic chan string, chat chan string) {
+func Connect(settings settings, send chan string, generic chan string, chat chan string) {
 
 	// creat interrupt channel to feed into when an os.Interrupt is triggered (ctrl-c)
 	interrupt := make(chan os.Signal, 1)
