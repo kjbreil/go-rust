@@ -13,10 +13,14 @@ func main() {
 	rcon := wsrcon.Connect(&ss)
 
 	rcon.AddGenericHandler(basicGenericHandler)
-
+	rcon.AddChatHandler(basicChatHandler)
 	rcon.Start()
 }
 
 func basicGenericHandler(msg string) {
+	fmt.Printf("Generic Message: %s", msg)
+}
+
+func basicChatHandler(msg string) {
 	fmt.Printf("Generic Message: %s", msg)
 }
