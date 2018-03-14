@@ -21,6 +21,6 @@ func basicGenericHandler(msg string) {
 	fmt.Printf("Generic: %s\n", msg)
 }
 
-func basicChatHandler(msg string) {
-	fmt.Printf("Chat: %s\n", msg)
+func basicChatHandler(chat wsrcon.Chat) {
+	fmt.Printf("%s: %s\n", chat.Username, chat.Message)
 }
