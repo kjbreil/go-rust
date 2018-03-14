@@ -12,7 +12,7 @@ func main() {
 
 	rcon := wsrcon.Connect(&ss)
 
-	rcon.AddChatHandler(basicGenericHandler)
+	rcon.AddGenericHandler(basicGenericHandler)
 
 	rcon.Start()
 }
