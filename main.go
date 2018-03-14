@@ -18,9 +18,9 @@ func main() {
 }
 
 func basicGenericHandler(msg string) {
-	fmt.Printf("Generic Message: %s", msg)
+	fmt.Printf("Generic: %s\n", msg)
 }
 
 func basicChatHandler(msg string) {
-	fmt.Printf("Generic Message: %s", msg)
+	fmt.Printf("Chat: %s\n", msg)
 }
